@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anandam Infolines</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @media (max-width: 480px) {
+
+        }
+          
+
+        @media (max-width: 480px) {
+            .form {
+              width: 100%;
+              max-width: 100%;
+              margin: 0 auto;
+            }
+          
+            .form-input {
+              width: 100%;
+              max-width: 100%;
+              margin: 4px;
+            }
+          
+            .in_btn {
+              flex-direction: column;
+              margin-top: 10px;
+              align-items: center;
+            }
+          
+            .logo,
+            .number {
+              margin: 5px 0;
+            }
+          }
+          
+        .navbar{
+            display: flex;
+            background-image: url('https://th.bing.com/th/id/OIP.HKcWH8hqEfLwkQX8vQI6ZAHaDL?w=322&h=150&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+            justify-content:space-evenly;
+            align-items:center;
+            /*background: linear-gradient(120deg, #439146, #9edee4, #9cbaee);*/
+            text-align: center;
+            font-weight: bold;
+            font-color: white;
+            /* height: 107px; */
+        }
+
+        .navbar .dd_text:hover{
+            font-size: 22px;
+         
+        }
+
+        .dropdowns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: inline-block;
+            padding: 15px;
+            height: 100%;
+            /* width: 75%; */
+            font-size: 20px;
+            
+        }
+
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background: linear-gradient(to bottom, #ffffff, #cc88d2), url('https://th.bing.com/th/id/OIP.CenFBYvb3WGRVPp2kNe6EgHaDB?w=349&h=142&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+           
+            /* min-width: 200px; */
+            width: 1013.26px;
+            height: 350px; background-size: cover;
+            /* box-shadow: 0px 8px 16px 0px rgba(179, 40, 40, 0.2); */
+            border: 1px rgb(153, 98, 127) solid;
+            z-index: 1;
+            border-radius: 5px;
+        }
+        
+
+        .dropdown-content a:hover {
+            background-color: #d0a1a1;
+        }
+
+        .first_list:hover .dropdown-content {
+            display: block; 
+            color: #000000;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: flex;
+            justify-content:space-evenly;
+        }
+        .dropdown-content2 {
+            display: none;
+            position: absolute;         
+                 background-image: linear-gradient(to bottom right, #44cefc, #fceb4e);
+            /* min-width: 200px; */
+            width: 240px;
+            height: 250px;
+            box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+            border: 1px rgb(40, 181, 172) solid;
+            z-index: 1;
+            border-radius: 5px;
+        }
+        
+        
+
+        /* .dropdown-content2 a:hover {
+            background-color: #d0a1a1;
+        } */
+
+        .second_list:hover .dropdown-content2 {
+            display: block; 
+            color: #000000;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+
+        .dropdown-content3{
+            display: none;
+            position: absolute;
+            
+            background-image: linear-gradient(to bottom right, #92dcf5, #FFF593);
+            background-repeat: no-repeat;
+            /*
+           background-color: #ffffff;*/
+            /* min-width: 200px; */
+            width: 240px;
+            height: 250px;
+            box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+            border: 1px rgb(255, 255, 255) solid;
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        /* .dropdown-content3 a:hover {
+           background-color: #d0a1a1;
+        } */
+
+        .third_list:hover .dropdown-content3 {
+            display: block; 
+            color: #000000;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+
+
+        .dropdowns ul {
+            list-style-type: none;
+        }
+
+        .list{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .list li{
+            margin: 12px;
+        }
+
+        .list li a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .dropdowns ul li a{
+            color: #ffffff;
+            text-decoration: none;
+            margin: 13px;
+            text-align: center;
+        }
+        
+
+        .dropdowns ul li ul li{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdowns ul li ul li ul{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ul_left{
+            margin: 4px;
+            padding: 10px;
+        }
+
+        .dd_left{
+            box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+            height: 100%;
+            width: 50%;
+        }
+
+        .dd_right{
+            box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+            height: 100%;
+            width: 50%;
+        }
+        
+    @media (max-width: 580px) {
+        .dd_right{
+            margin-left :37vh;
+        }
+        }
+
+        .first_ulist{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        
+        .first_list{
+            position: relative;
+            width: 228px;
+            font-size: 20px;
+        }
+
+        
+        .second_list{
+            position: relative;
+            width: 299px;
+            font-size: 20px;
+        }
+
+        
+        .third_list{
+            position: relative;
+            width: 259px;
+            font-size: 20px;
+        }
+
+        
+        .fourth_list{
+            width: 60px;
+            font-size: 20px;
+        }
+
+        
+        .fifth_list{
+            width: 225px;
+            font-size: 20px;
+        }
+
+        .sixth_list{
+            width: 120px;
+            font-size: 20px;
+        }
+
+        /*--------------------------------------HEADER BEGINS--------------------------------*/
+
+        .fullheader{
+            display: flex;
+        }
+        /*header ka background*/
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+           
+            height: 100vh;
+            background-image: url('https://th.bing.com/th/id/OIP.sOgUx19yyG5_aHCJ2fSxawHaHa?pid=ImgDet&w=207&h=207&c=7&dpr=1.3');
+           background-color: rgb(0, 0, 0, 0.3);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            /* transition: 3s; */
+            /* transition: 0.3s,border-radius 0.3s,opacity 0.3s; */
+            /*background-color:  #cfc6e3;*/
+            animation: animate 10s ease-in-out infinite alternate-reverse forwards;
+        }
+
+        @keyframes animate{
+            0%{
+                background-image: url('https://i.pinimg.com/originals/89/67/92/8967925b9d9141e88ced0a9020bdbc5e.gif');
+                background-image: rgba(0,0,0,0.7);
+            }
+            35%{
+                background-image: url('https://weareadaptive.com/wp-content/themes/bh-core/assets/images/pages/Home-Real-time-delivery/top.gif');
+                background-image: rgba(0,0,0,0.7);
+            }
+           
+            75%{
+                background-image: url('https://www.bing.com/th/id/OGC.62f44ada70b6c1c99bd57aad3f0ff0c3?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f52%2fc2%2f13%2f52c21320da64f6e48e5e77d140f7fbd1.gif&ehk=W7qQ31MuO4TddjtJjhxB6lhiDti8uNTSJqqj6PhfA4Q%3d');
+                background-image: rgba(0,0,0,0.7);
+            }}
+
+        .boxes{
+            display: flex;
+            flex-direction: row;
+            /* justify-content:space-between; */
+            align-items: center;
+            height: 100%;
+        }
+
+        .box1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;   
+            height: 100%;
+            width: 60%;
+            /* margin: 24px; */
+            padding: 65px 15px;
+        }
+
+        .heading{
+            text-align: center;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .para{
+            font-size: 21px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .btn{
+            height: 6vh;
+            width: 14vw;
+        }
+
+        .in_btn{
+            height: 6vh;
+            width: 14vw;
+            cursor: pointer;
+            border: 2px black solid;
+            border-radius: 6px;
+            font-size: 15px;
+            background-color: #92bfc0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo{
+            height: 35px;
+            width: 38px;
+            display: inline-block;
+        }
+
+        .number{
+            display: inline-block;
+        }
+
+        .btn .logo img{
+            height: 35px;
+            width: 38px;
+        }
+        
+    @media (max-width: 580px) {
+        .btn .logo img{
+            height: 35px;
+    width: 40vw;
+    margin-left: -30vw;
+    margin-top: 7vh;
+        }}
+
+        @media (min-width: 581px) and (max-width: 1439px) {
+            .btn .logo img{
+            height: 35px;
+            width: 30vw;
+        margin-left: -30vw;
+        margin-top: 7vh;}
+          }
+          @media (min-width: 320px) and (max-width: 767px){
+          .btn2{
+            height: 6vh;
+            width: 50vw;
+            border-radius: 12px;
+        }}
+    
+        .number p{
+            text-align: justify;
+        }
+
+        .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* height: 50vh; */
+        border: 3px solid rgb(0 0 0);
+        border-radius: 45px;
+        width: 26vw;
+        margin: 135px 78px;
+        height: 60%;
+    }
+
+    .register h1{
+      font-family: 'Roboto Slab', serif;
+      margin: 10px 0px 12px 0px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+    }
+
+    .form-input{
+        width: 100%;
+        padding: 9px;
+        border: 2px solid black;
+        border-radius: 12px;
+        margin: 4px;
+    }
+
+    .btn2{
+            height: 6vh;
+            width: 8vw;
+            border-radius: 12px;
+        }
+
+    .box2{
+        margin: 2px;
+        width: 40%;
+        height: 100%;
+    }
+
+    /*media query for form*/
+    @media (max-width: 1439px) {
+        .fullheader {
+          display: block;
+        }
+      
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+      
+        .boxes {
+          flex-direction: column;
+        }
+      
+        .box1 {
+          width: 95%;
+          /*padding: 40px 150px;*/
+        }
+      
+        .box2 {
+          width: 100%;
+          margin: 0;
+        }
+      
+        .register {
+          margin: 20px auto;
+          text-align: center;
+          width: 75vw;
+          border-radius: 5px;
+        }
+
+        
+      
+        .form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 70%;
+          margin: 0 auto;
+          max-width: 70vw;
+        }
+      
+        .form-input {
+          width: 100%;
+          padding: 9px;
+          border: 2px solid black;
+          border-radius: 5px;
+          margin: 4px;
+        }
+      
+        .in_btn {
+          flex-direction: column;
+          margin-top: 10px;
+          width: 20vw;
+          align-items: center;
+        }
+    
+        .number p{
+    margin-bottom: 10vh
+        }
+
+        .logo,
+        .number {
+          margin: 5px 0;
+        }
+      }
+      
+      @media (max-width: 320px) {
+        .container,
+        
+        .box2,
+        .form,
+        .form-input {
+          width: 70%;
+          max-width: 70vw;
+        }
+        .box1{
+            margin-left: 10px;
+            width:80vw
+        }
+      }
+      
+    /*--------------------------------------HEADER ENDS-----------------------------------*/
+
+/*company registration*/
+.company_registration {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #054dca; */
+    height: 40vh;
+    opacity: 0; /* Initially hide the section */
+    transform: translateY(100px); /* Move the section below the screen */
+    transition: opacity 0.5s, transform 0.5s; /* Add transition properties */
+}
+
+.company_registration.slide-in {
+    opacity: 1; /* Show the section */
+    transform: translateY(0); /* Move the section to its original position */
+}
+
+    .title1{
+        text-align: center;
+        /* height: 10%; */
+        padding: 25px 0px;
+       /* background-color: coral*/
+    }
+
+    
+
+
+    .s_container1{
+        height: 85%;
+        width: 100%;
+    }
+    
+
+    .s_boxes1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin: auto; */
+        height:90%;
+    }
+
+
+    .s_box1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 15px;
+        background-color: beige;
+        width: 466px;
+        height: 100%;
+        justify-content: space-evenly;
+        margin: 25px 0px 4px 0px;
+    }
+
+    .s_box1:hover{
+        box-shadow: 10px 10px 10px 10px rgba(179, 40, 40, 0.2);
+    }
+
+    .s_content1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #131713;
+        margin: 20px 0px 20px 0px;
+    }
+
+
+    @media (max-width: 767px) {
+        .s_box1 {
+            width: 100%;
+            margin: 10px 0px;
+        }
+        
+    .title1{margin-top: 10vh;}
+    }
+    
+    @media (max-width: 1439px) {
+        .s_boxes1 {
+            flex-wrap: wrap;
+            background-color: white;
+        }
+    
+        .s_box1 {
+            margin: 10px 0px;
+        }
+    }
+    
+
+/*----------------------------------------------------------------------------------------------*/
+
+.our_services
+    {
+        margin: 20px 0px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        /*background-color: #ce5537;*/
+    }
+    
+.title2{
+    text-align: center;
+
+    /* height: 10%; */
+    padding: 25px 0px;
+    /*background-color: rgb(92, 80, 255);*/
+}
+
+
+.s_container2{
+    height: 85%;
+    width: 100%;
+    
+}
+
+
+.s_boxes2{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: auto; */
+}
+
+
+.s_box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(3, 3, 3);
+    border-radius: 15px;
+    background-color: beige;
+    width: 15vw;
+    height: 90vh;
+    justify-content: center;
+    margin: 25px 0px 4px 0px;
+    font-size: medium;
+    font-display: auto;
+    text-align: lefriendly;
+}
+
+.s_box2:hover{
+    box-shadow: 3px 3px 5px 3px rgb(9, 255, 0);
+}
+
+
+
+/*our services ke 6 dabbo ka text */
+
+.s_content2{
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    padding-left: 1vw;
+    color: #0099ff;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px 0px 20px 0px;
+}
+/*------------------------------------------------------------------------------------------------*/
+/*MEDIA QUERY FOR OUR SERVICES*/
+@media (max-width: 1439px) {
+    .s_boxes2 {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title2{margin-top: 90vh;}
+
+    .s_box2 {
+        width: 80vw;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .s_content2 {
+        padding-left: 2vw;
+        font-size: small;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 480px) {
+    .title2{margin-top: 130vh;}
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+.button_ourservices {
+  padding-top: 6vh;
+  padding-left: 0.5vw;
+}
+
+.button {
+  background-color: rgb(0, 0, 0);
+  color: rgb(10, 255, 22);
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  color: #111;
+  background: #56f53a;
+  box-shadow: 0 0 50px #329640;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(38, 228, 0);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/   
+        /*DROPDOWN MENU KE LIYE MEDIA QUERY*/
+        @media (max-width: 1439px) {
+            .dropdowns {
+              display: inline-block;
+              padding: 15px;
+              height: 100%;
+              font-size: 20px;
+            }
+          
+            .first_ulist {
+              display: flex;
+              flex-direction: row;
+            }
+          
+            .first_list:hover .dropdown-content {
+              display: block;
+              color: #000000;
+              padding: 8px 12px;
+              text-decoration: none;
+              display: flex;
+              justify-content: space-evenly;
+            }
+          
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background: linear-gradient(to bottom, #ffffff, #cc88d2),
+                url('https://th.bing.com/th/id/OIP.CenFBYvb3WGRVPp2kNe6EgHaDB?w=349&h=142&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+              width: 1013.26px;
+              height: 350px;
+              background-size: cover;
+              border: 1px rgb(153, 98, 127) solid;
+              z-index: 1;
+              border-radius: 5px;
+            }
+          
+            .dropdown-content a:hover {
+              background-color: #d0a1a1;
+            }
+          
+            .first_list:hover .dropdown-content {
+              display: block;
+              color: #000000;
+              padding: 8px 12px;
+              text-decoration: none;
+              display: flex;
+              justify-content: space-evenly;
+            }
+          
+            .dropdown-content2 {
+              display: none;
+              position: absolute;
+              background-image: linear-gradient(to bottom right, #44cefc, #fceb4e);
+            
+              width: 240px;
+              height: 250px;
+              box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+              border: 1px rgb(40, 181, 172) solid;
+              z-index: 1;
+              border-radius: 5px;
+            }
+          
+            /* .dropdown-content2 a:hover {
+              background-color: #d0a1a1;
+            } */
+          
+            .second_list:hover .dropdown-content2 {
+              display: block;
+              color: #000000;
+              padding: 8px 12px;
+              text-decoration: none;
+            }
+          
+            .dropdown-content3 {
+              display: none;
+              position: absolute;
+              background-image: linear-gradient(to bottom right, #44cefc, #fceb4e);
+              background-size: cover;
+              background-repeat: no-repeat;
+              width: 240px;
+              height: 250px;
+              box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+              border: 1px rgb(255, 255, 255) solid;
+              z-index: 1;
+              border-radius: 5px;
+            }
+            
+
+
+
+            @media (max-width: 1439px) {
+                .navbar .menu-items ul {
+                  display: none;
+                }
+              
+                .navbar .menu-items.show ul {
+                  display: flex;
+                  flex-direction: column;
+                }
+              
+                .navbar .menu-items li {
+                  width: 100%;
+                }
+              
+                .navbar .menu-items a {
+                  display: block;
+                  padding: 10px;
+                }
+              
+                .navbar .menu-items .dropdown-content {
+                  position: static;
+                  display: block;
+                  padding: 10px;
+                  width: 100%;
+                }
+              
+                .menu-icon {
+                  display: block;
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  cursor: pointer;
+                  font-size: 24px;
+                  color: #000;
+                  z-index: 9999;
+                }
+              
+                .navbar .menu-items.show .menu-icon {
+                  color: #fff;
+                }
+                
+
+                .dd_left {
+                    box-shadow: 5px 8px 16px 5px rgba(72, 179, 40, 0.907);
+                    height: 100%;
+                    width: 50%;
+                }
+              }
+
+              
+              
+          
+            /* .dropdown-content3 a:hover {
+  background-color: #d0a1a1;
+} */
+
+.third_list:hover .dropdown-content3 {
+  display: block;
+  color: #000000;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.dd_left {
+  box-shadow: 5px 8px 16px 5px rgba(179, 40, 40, 0.2);
+  height: 100%;
+  width: 50%;
+}
+
+.ul_left {
+  margin: 4px;
+  padding: 10px;
+}
+
+/* Mobile View */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.navbar .menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.navbar .menu-icon:hover {
+  color: #cc88d2;
+}
+
+.dropdowns {
+  width: 100%;
+}
+
+.first_ulist {
+  flex-direction: column;
+}
+
+.first_list:hover .dropdown-content {
+  position: static;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.dropdown-content2,
+.dropdown-content3 {
+  position: static;
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 1439px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .dd_text:hover {
+    font-size: 22px;
+  }
+
+  .dropdowns {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .dropdowns ul li a {
+    margin: 8px;   
+  }
+
+  .first_list,
+  .second_list,
+  .third_list,
+  .fourth_list,
+  .fifth_list,
+  .sixth_list {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Mobile View */
+  .menu-icon {
+    display: flex;
+  }
+
+  .navbar .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .menu-items.show {
+    display: flex;
+  }
+
+  .navbar .menu-items ul {
+    flex-direction: column;
+  }
+
+  .navbar .menu-items li {
+    width: 100%;
+  }
+
+  .navbar .menu-items a {
+    display: block;
+    padding: 10px;
+  }
+
+  .navbar .menu-items .dropdown-content {
+    position: static;
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
+}
+}
+@media (max-width: 1439px){
+.head{
+    margin-left:5px;
+}
+
+.s_container5{
+    margin: 20px 0px;
+    padding-top:5vh;
+    height: 250px;
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+}
+          
+/*-----------------------------------------------------------------------------------------------------*/
+
+.s_content2 li{
+    margin: 5px 0px;
+    font-size: large;
+}
+
+.button_ourservices {
+    padding-top: 6vh;
+    padding-left: 0.5vw;
+}
+
+.button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(10, 255, 22);
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    color: #111;
+    background: #56f53a;
+    box-shadow: 0 0 50px #329640;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(38, 228, 0);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.margin_s3{
+    /* margin: auto; */
+    padding: 10px;
+}
+
+.sub_margin_s3{
+    margin: auto 8px;
+}
+
+.s_content3{
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    line-height: 1.6;
+}
+
+.talk {
+    background-color: #d0a1a1;
+    height: 100px;
+    /* width: 80%;                  UnComment this for exact box
+    margin: 0px auto; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    opacity: 0; /* Initially hide the talk box */
+    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+}
+
+.talk_box {
+    padding: 12px 0px;
+    margin: auto;
+    width: 40%;
+    background-color: #329640;
+    border: 2px solid black;
+    border-radius: 10px;
+    transform: scale(1.2); /* Initially scale down the talk box */
+    transition: transform 0.1s ease-in-out; /* Add transition for scaling */
+}
+
+.talk_content h2 {
+    color: #ffffff;
+    width: 57%;
+    margin: auto;
+    cursor: pointer;
+    animation: zoomInOut 0.5s infinite alternate; /* Add animation for zooming in and out */
+}
+
+/* Define keyframes for the zoomInOut animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Start with normal scale */
+    }
+
+    50% {
+        transform: scale(1.1); /* Zoom in to 110% scale */
+    }
+
+    100% {
+        transform: scale(1); /* Zoom out to normal scale */
+    }
+}
+
+.s_container5{
+    margin: 20px 0px;
+    height: 250px;
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about_header{
+    /* margin: 12px auto 44px; */
+    text-decoration: underline;
+}
+
+.about_content{
+    text-align: center;
+    width: 95%;
+    font-size: 20px;
+    margin: 0px auto 42px;
+}
+
+.s_box6{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        background-color: beige;
+        width: 466px;
+        height: 100%;
+        justify-content: space-evenly;
+        margin: 25px 0px 4px 0px;
+    }
+
+
+.s_container6{
+    height: 250px;
+}
+
+.s_box6 .s_content3{
+    margin: 12px 0px 0px;
+}
+
+
+.s_box6 .image{
+    height: 80px;
+    width: 85px;
+    text-align: center;
+}
+
+
+.section7{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.s_boxes6{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height:100%;
+    }
+
+.subtext6{
+    font-size: 20px;
+}
+
+.section8{
+    margin: 40px 0px 0px;
+    background-color: skyblue;
+    height: 400px;
+}
+
+.testimonial{
+    height: 100%;
+}
+
+    .test_content{
+         margin: 12px auto;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        padding: 15px;
+    }
+
+
+    .test_head{
+            display:block;
+        margin: 15px;
+        font-size: 55px;
+
+        }
+
+    .test_p{
+        display: inline-block;
+    }
+
+    .number{
+        cursor: pointer;
+    }
+
+    .footer{
+        height: 400px;
+    }
+
+    .f_container{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        background-color: darksalmon;
+        
+    }
+
+    .f_boxes {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        height: 90%;
+        width: 90%;
+        justify-content: center;
+        transform: translateY(100%); /* Initially translate the footer down */
+        transition: transform 0.5s ease-in-out; /* Add transition for the transform */
+    }
+    
+
+    .F-box{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        margin: 25px;
+    }
+
+    .Fn-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 25px;
+        width: 42%;
+    }
+
+    .f1_content2{
+        height: 155px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .f1_content2 ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    .f1_image{
+        margin: 0px 30px 0px 0px;
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+    }
+
+    .f1_p{
+        display: inline-block;
+    }
+
+    .social_media{
+        width: 37px;
+        /* margin: 10px; */
+        display: inline-block;
+        height: 30px;
+    }
+
+    .f1_content2_line1{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .f1_content3{
+        margin: 12px 0px;
+    }
+
+    .f2_content1{
+        margin: 22px 0px 33px 0px;
+    }
+
+    .f2_content2{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .f2_content2 ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    .f2_content2 ul li a{
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+    }
+
+    .hr_solid{
+        border: 1px solid black;
+    }
+
+    .hr_line{
+        text-decoration: dotted;
+    }
+
+    .f2_content2 ul li a:hover{
+        color: blue;
+    }
+
+    li a:hover{
+        color:crimson;
+    }
+/*-------------------------------------------MEDIA QUERY FOR NEW----------------------------------------*/
+    @media (max-width: 767px) {
+        .s_content2 li {
+            font-size: large;
+          margin: 5px 0;
+        }
+      
+        .button_ourservices {
+          padding-top: 6vh;
+          padding-left: 0.5vw;
+        }
+      
+        
+      
+        .box {
+          width: 80px;
+          height: 80px;
+        }
+      
+        .margin_s3 {
+          padding: 5px;
+        }
+      
+        .sub_margin_s3 {
+          margin: auto 4px;
+        }
+      
+        /*.s_content3 {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }*/
+
+        
+        .talk {
+          height: auto;
+          text-align: center;
+          padding: 8px 0;
+        }
+      
+        .talk_box {
+          padding: 8px 0;
+          width: 60%;
+        }
+      
+        .talk_content h2 {
+          width: 80%;
+        }
+      
+        .s_container5 {
+          margin: 10px 0;
+          height: auto;
+        }
+      
+        .about_header {
+          text-decoration: none;
+        }
+      
+        .about_content {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+      
+        /*.s_box6 {
+          width: 100%;
+          margin: 10px 0;
+        }*/
+      
+        /*.s_box6 .s_content3 {
+          margin: 10px 0;
+        }*/
+      
+        /*.s_box6 .image {
+          height: 60px;
+          width: 65px;
+        }*/
+      
+        .section8 {
+          margin: 20px 0;
+          height: auto;
+        }
+      
+        .testimonial {
+            margin-top: 50vh;
+          height: auto;
+        }
+      
+        
+.test_content {
+    margin-top: -100vh;
+    width: 90%;
+    padding: 10vh;
+}
+      
+        .slider {
+          height: 50%;
+        }
+      
+        .test_head {
+          font-size: 40px;
+        }
+      
+        .footer {
+          height: auto;
+        }
+      
+        .f_boxes {
+          flex-wrap: wrap;
+        }
+      
+        .F-box,
+        .Fn-box {
+          margin: 15px;
+          width: 100%;
+        }
+      
+        .f1_content2 {
+          flex-wrap: wrap;
+          height: auto;
+          justify-content: center;
+        }
+      
+        .f1_image {
+          margin: 0 10px 0 0;
+          height: 8px;
+          width: 8px;
+        }
+      
+        .f1_p {
+          display: inline;
+        }
+      
+        .social_media {
+          width: 30px;
+          height: 25px;
+        }
+      
+        .f1_content2_line1 {
+          flex-wrap: wrap;
+        }
+      
+        .f1_content3 {
+          margin: 8px 0;
+        }
+      
+        .f2_content1 {
+          margin: 10px 0 20px;
+        }
+      
+        .f2_content2 ul li a {
+          font-size: 16px;
+        }
+      }
+
+      
+      @media (max-width: 767px) {
+        .s_boxes6 {
+          flex-wrap: wrap;
+          margin-bottom: 50px;
+        }
+        
+        .section6 {
+          padding-bottom: 50vh;
+        }
+        
+        .section7 {
+          padding-bottom: 100vh;
+        }
+        
+        .s_box6 {
+          width: 50%;
+          margin: 10px 0;
+          max-width: 250px;
+        }
+        
+        .s_box6 .image {
+          height: 60px;
+          width: 65px;
+        }
+      }
+    /*  
+      @media (max-width: 506px) {
+        .s_box6 {
+            padding-top: -10px;
+          width: 100%;
+        }
+      }*/
+
+      /*media query for grids above testimonial*/
+      @media (max-width: 506px) {
+      .gridmedia{
+        margin-top: 50vh;
+        margin-bottom: 50vh;
+      }
+    }
+    /*madia query foor footer contact us*/
+    @media (max-width: 767px) {
+        .f_boxes {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          width: 100%;
+        }
+        .f1_content2 img{margin-top: 5px;}
+      }
+      
+      
+      
+                       /*           BACKGROUND COLORS         */
+
+
+    .title1{
+        /* background-color: #f06859; */
+        /* background-color: #4ac649; */
+        /* background-color: coral; */
+        /* background: linear-gradient(45deg, #51d356, #eae1ad); */
+        
+    }
+
+    .title2{
+        /* background-color: #f06859; */
+        /* background-color: #4ac649; */
+        /* background-color: coral; */
+        /* background: linear-gradient(45deg, #51d356, #eae1ad); */
+        
+    }
+    .s_container1{
+        /* background-color: #3c9bd6; */
+        /* background-color: #59b5ef */
+        
+    }
+    .s_boxes2{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .s_box2{
+        /* background-color: beige; */
+        /* background-color: #73dced; */
+    }
+    .s_box2_alternate{
+        /* background-color: beige; */
+        /* background-color: #faed55; */
+    }
+    .our_services
+    {
+        /* background-color: #bae10b; */
+    }
+
+
+    
+    .s_box2 h3 {
+    text-align: center;
+    }
+    .subtext{
+        color: black;
+    }
+    .s_container5{
+        margin: 0px;
+    }
+    .s_box6 {
+        margin: 0;
+    }
+    .s_box6 .image{
+        margin: auto;
+    }
+    
+    .talk{
+        background: linear-gradient(45deg, #7442ab, #bdeda9);
+    }
+    .talk_box{
+        background-color: transparent;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .s_box2:hover{
+    box-shadow: 3px 3px 3px 3px rgb(62, 71, 74);
+    }
+    .s_container5{
+        background-color: transparent;
+    }
+    
+    .s_box6_first{
+        background-color: #92dcf5;;
+    }
+    .s_box6_second{
+        background-color: peachpuff;
+    }
+    .testimonial{
+        font-size: 30px;
+        color:rgb(0, 0, 0);
+        font-weight: bolder;
+
+        background-image: url("https://th.bing.com/th/id/OIP.wzlMqtBTqwfKgsX-YRBwWQAAAA?pid=ImgDet&w=193&h=193&c=7");
+        background-color: rgba(232, 210, 210, 0.19);
+
+        background-size:30%;
+    }
+    .f_container{
+        background-color: #eff34c;
+    }
+    
+    
+                                       /* TEST 2 */
+
+
+    .title1{
+        /* background-color: #f06859; */
+        background-color: #FFF593;
+        
+    }
+
+    .title2{
+        /* background-color: #f06859; */
+        background-color: #FFF593;
+        /* background-color: #6E00FF; */
+        
+    }
+    .s_container1{
+        background-color: #3c9bd6;
+        /* background-color: #6E00FF; */
+        background-color: #0dbaf3;
+    }
+    @media (max-width: 1439px) {
+        .s_container1{
+            background-color: #ffffff;
+    }}
+    .s_box1{
+        background: transparent;
+    }
+    .s_boxes2{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .s_box2{
+        background-color: beige;
+        /* background-color: #6E00FF; */
+        background-color: #0dbaf3;
+    }
+    .s_box2_alternate{
+        background-color: beige;
+        background-color: #f3e675;
+    }
+    .our_services
+    {
+        background-color: #bae10b;
+        /* background-color: #6E00FF; */
+        background: transparent;
+    }
+      
+        /*autotype effect*/
+        
+/*----------------------------------------------------------------------------------------------------*/
+
+/* Add the necessary styles for the falling animation */
+   .falling-animation {
+    position: relative;
+    animation: falling 1.0s ease-in-out;
+}
+@keyframes fadeIn{
+    0% {opacity: 0}
+    20% {opacity: 0.2}
+    40% {opacity: 0.4}
+    60% {opacity: 0.6}
+    80% {opacity: 0.8}
+    100% {opacity: 1.0}
+}
+
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/*-----------*/
+    .h3 {
+      font-size: 1em;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+    }
+  
+    .image{
+        margin: 12px;
+    }
+
+    .typewriter {
+      display: inline-block;
+    }
+
+    </style>
+
+
+</head>
+
+<body>
+
+      <!--navbar below-->
+    <nav class="navbar">
+        <div class="company">
+                <img src="https://th.bing.com/th/id/OIP.WEX7qLbWzWqxRKDhVPKkFgHaFW?w=277&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Company Logo"
+                width="100vw" 
+                height="100vh" />
+            </div>
+
+        <!--seperate div of and dropdown menu-->
+
+ <!--DROPDOWN-->
+
+         <div class="dropdowns">
+            <ul class="first_ulist">
+                <!--<li class="first_list">
+                    <a href="#">Business Registration</a>
+                        <ul class="dropdown-content">
+                            <li class="dd_left">
+                                <ul class="ul_left">
+                                    <li>
+                                        <a href="Company Registration.html" target="_blank">
+                                            <span class="dd_text">Company Registration</span>
+                                          </a>
+                                          
+                                          
+                                    </li>
+                                    <li>
+                                        <a href="Private Limited Company.html" target="_blank">
+                                            <span class="dd_text">Private Limited Company</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Proprietorship Registration.html" target="_blank">
+                                            <span class="dd_text">Proprietorship Registration</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Partnership Registration.html" target="_blank">
+                                            <span class="dd_text">Partnership Registration</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="One person company Registration.html" target="_blank">
+                                            <span class="dd_text">One person company Registration</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="LLP Registration.html" target="_blank">
+                                            <span class="dd_text">LLP Registration</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Public Limited Company Registration.html" target="_blank">
+                                            <span class="dd_text">Public Limited Company Registration</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        -->
+<!--dropdown 1 - second part-->
+<!--<li class="dd_right">
+    <ul class="ul_left">
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Nidhi Company Registration</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Society Registration</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Micro finance Company Registration</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Section 8 Company</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Producer Company Registration</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Non-Banking Financial Company</span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span class="dd_text">Trust Registration</span>
+            </a>
+        </li>
+    </ul>
+</li>
+</ul>
+</li>
+
+-->
+
+
+<!--dropdown2-->  <li class="second_list center">
+    <a href="#">Business Registration</a>
+    <ul class="dropdown-content2">
+        <li>
+            <a href="Company Registration.html" target="_blank">
+                <span class="dd_text">Company Registration</span>
+              </a>
+              
+              
+        </li>
+        <li>
+            <a href="Private Limited Company.html" target="_blank">
+                <span class="dd_text">Private Limited Company</span>
+            </a>
+        </li>
+        <li>
+            <a href="Proprietorship Registration.html" target="_blank">
+                <span class="dd_text">Proprietorship Registration</span>
+            </a>
+        </li>
+        
+        <li>
+            <a href="LLP Registration.html" target="_blank">
+                <span class="dd_text">LLP Registration</span>
+            </a>
+        </li>
+    </ul>
+    </li>
+    
+
+<!--dropdown2-->  <li class="second_list center">
+<a href="#">Accounting & Book Keeping</a>
+<ul class="dropdown-content2">
+<li>
+    <a href="Accounting Services.html" target="_blank">
+        <span class="dd_text">Accounting Services</span>
+    </a>
+</li>
+<li>
+    <a href="Bookkeeping Services.html" target="_blank">
+        <span class="dd_text">Bookkeeping Services</span>
+    </a>
+</li>
+<li>
+    <a href="Reconstruction of Accounting Records.html" target="_blank">
+        <span class="dd_text">Reconstruction of Accounting Records</span>
+    </a>
+</li>
+<li>
+    <a href="Partnership with IDFC Bank.html" target="_blank">
+        <span class="dd_text">Partnership with IDFC Bank</span>
+    </a>
+</li>
+</ul>
+</li>
+
+
+<!--dropdown3-->  <li class="third_list center">
+<a href="#">Taxation & Compilances</a>
+<ul class="dropdown-content3">
+<li>
+    <a href="GST Registration Services.html" target="_blank">
+        <span class="dd_text">GST Registration Services</span>
+    </a>
+</li>
+<li>
+    <a href="GST Compliance.html" target="_blank">
+        <span class="dd_text">GST Compliance</span>
+    </a>
+</li>
+<li>
+    <a href="Corporate Tax.html" target="_blank">
+        <span class="dd_text">Corporate Tax</span>
+    </a>
+</li>
+<li>
+    <a href="TDS Return Filing Services.html" target="_blank">
+        <span class="dd_text">TDS Return Filing Services</span>
+    </a>
+</li>
+</ul>
+
+</li>
+
+
+<!--not a dropdown-->
+<li class="fourth_list center">
+<a href="#">Blog</a>
+
+</li>
+
+<!--not a dropdown-->
+<li class="fifth_list center">
+<a href="#">Become an Associate</a>
+
+</li>
+
+<!--not a dropdown-->
+<li class="sixth_list center">
+<a href="#">Contact Us</a>
+
+</li>
+
+
+
+</ul>
+</div>
+</nav>
+<!--header content below-->
+<header class="fullheader">
+    <div class="container">
+        <div class="boxes">
+            <div class="box1">
+                <div class="heading">
+                    <div class="heading">
+                        <h2 class="falling-animation">Anandam Infolines:</h2>
+                    </div>
+                    
+                    
+                        <br>
+                       <h4 id="tagline" class="typewriter"></h4>
+                </div>
+                <div class="para">
+
+                    
+
+                    <p>
+                        At Anandam Infolines, we specialize in providing comprehensive Virtual CFO services to startups, small and medium-sized enterprises (SMEs), and corporate enterprises. Our wide range of services encompasses crucial areas such as Incorporation, Registrations, Secretarial Compliances, Statutory Licenses, Accounting & Bookkeeping, Taxation & Audit, and other associated professional services. We understand the challenges and time constraints that come with running a business, which is why we offer tailored solutions to address your specific needs.
+<br>
+<br>
+                        Our team of experienced professionals is dedicated to guiding and supporting you throughout your business journey. From the initial setup to ongoing compliance and regulatory requirements, we ensure that you receive expert guidance at every stage of the business lifecycle. With our reliable, efficient, and cost-effective Virtual CFO services, you can focus on what matters most – growing your business and achieving your goals.
+                        <br>
+                        <br>      
+                        Trust Anandam Infolines as your go-to partner for all your Virtual CFO needs. Contact us today to unlock the full potential of your business and experience the peace of mind that comes with having a trusted financial advisor by your side.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="box2">
+                <div class="register">
+                    <h1 class="r_head">Contact Us</h1>
+                    <div class="form">
+                        <input class="form-input" type="text" name="name" id="name" placeholder="Enter your Name">
+                        <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your Mobile number">
+                        <input class="form-input" type="email" name="email" id="email" placeholder="Enter your Email">
+                        <textarea name="text" id="text" cols="10" rows="5" class="form-input">Write your Concern here</textarea>
+                        <button class="btn2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+        <!--1111111111111111111111111111111111111111111111111111111111111111111111111-->
+        <section class="company_registration">
+            <div class="title1">
+                <h1 class="h_font">Company Registration</h1>
+            </div>
+            <div class="s_container1">
+                <div class="s_boxes1">
+                    <div class="s_box1">
+                        <div class="image">
+                            <img src="briefcase.png" height="50px" width="45px" alt="img">
+                        </div>
+                        <div class="s_content1">
+                            <h3>OPC</h3>
+                            <p> <br> </p>
+                            <li class="subtext">PAN & TAN Registration</li>
+                            <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                        </div>
+                    </div>
+                    <div class="s_box1">
+                        <div class="image">
+                            <img src="book.png" height="50px" width="45px" alt="img">
+                        </div>
+                        <div class="s_content1">
+                            <h3>Private Limited</h3>
+                            <p> <br> </p>
+                            <li class="subtext">PAN & TAN Registration</li>
+                            <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                        </div>
+                    </div>
+                    <div class="s_box1">
+                        <div class="image">
+                            <img src="icestack.png" height="50px" width="45px" alt="img">
+                        </div>
+                        <div class="s_content1">
+                            <h3>LLP</h3>
+                            <p> <br> </p>
+                            <li class="subtext">PAN & TAN Registration</li>
+                            <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--22222222222222222222222222222222222222222222222222222222222222222222222222222222222222-->
+        
+            <section class="our_services">
+                <div class="title2">
+                    <h1 class="font">OUR SERVICES</h1>
+                </div>
+                <div class="s_container2">
+                    <div class="s_boxes2">
+                        <div class="s_box2">
+                            <h3>Corporate Law & Compliance</h3>
+                            <div class="image">
+                                 
+                                <img src="file_signature.png" height="50px" width="45px" alt="img">
+                           
+                            </div>
+                            <div class="s_content2">
+                                <p> <br> </p>
+                                <li class="subtext">Company Incorporation</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Director Appointment</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Director Resignation</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Structure Conversion</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Name Change</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Address Change</li>
+                                <hr class="hr_line">
+                                <li class="subtext">ROC Return</li>
+                                <hr class="hr_line">
+                                <li class="subtext">XBRL Filing</li>
+                                <hr class="hr_line">
+                                <li class="subtext">MCA Services</li>
+                                <hr class="hr_line">
+                                <li class="subtext">FEMA Compliance</li>
+                            <!--BUTTON-->
+                            <div class="button_ourservices"></ul>
+                                <a href="enquire.html">
+                                  <button class="button">Enquire Now</button>
+                                </a>
+                            </div>
+                            <!--BUTTON-->
+                            </div>
+
+                        </div>
+                        <div class="s_box2 s_box2_alternate">
+                                <h3>Legal Support Services</h3>
+                            <div class="image">
+                                <img src="headphones.png" height="50px" width="45px" alt="img">
+                            </div>
+                            <div class="s_content2">
+                                <p> <br> </p>
+                                <li class="subtext">Due Diligence</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Agreement Drafting</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Replies Assistance</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Govt. Representation</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Advisory Services</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Assessments Support</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Appeals Assistance</li>
+                                <hr class="hr_line">
+                                <li class="subtext">NCLT Support</li>
+                                                                                    <!-- uncommented this to make it look better -->
+                                <!-- <hr class="hr_line">
+                                <li class="subtext">IBBI Services</li>
+                                <hr class="hr_line">
+                                <li class="subtext">Insolvency Assistance</li> -->
+                            <!--BUTTON-->
+                            <div class="button_ourservices"></ul>
+                                <a href="enquire.html">
+                                  <button class="button">Enquire Now</button>
+                                </a>
+                            </div>
+                            <!--BUTTON-->   
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="s_box2">
+                            <h3>Accounting & Book-keeping</h3>
+                        <div class="image">
+                            <img src="book.png" height="50px" width="45px" alt="img">
+                        </div>
+                        <div class="s_content2">
+                            <p> <br> </p>
+                            <li class="subtext">Statutory Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Internal Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Tax Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Stock Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Retail Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Concurrent Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">CSR Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Trust & Societies</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Transfer Pricing Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Secretarial Audit</li>
+                        <!--BUTTON-->
+                        <div class="button_ourservices"></ul>
+                            <a href="enquire.html">
+                              <button class="button">Enquire Now</button>
+                            </a>
+                        </div>
+                        <!--BUTTON-->
+                        </div>
+                    </div>
+
+                    <div class="s_box2 s_box2_alternate">
+                            <h3>Taxation Filling & Consultancy</h3>
+                        <div class="image">
+                            <img src="pen_nib.png" height="50px" width="45px" alt="img">
+                        </div>
+                        <div class="s_content2">
+                            <p> <br> </p>
+                            <li class="subtext">GST Registration</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Income Tax Filing</li>
+                            <hr class="hr_line">
+                            <li class="subtext">GST Filing</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Trust Advisory</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Tax Advisory</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Transfer Pricing</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Tax Saving</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Tax Accounting</li>
+                            
+                        <!--BUTTON-->
+                        <div class="button_ourservices"></ul>
+                            <a href="enquire.html">
+                              <button class="button">Enquire Now</button>
+                            </a>
+                        </div>
+                        <!--BUTTON-->    
+                        </div>
+                    </div>
+                    
+                    <div class="s_box2">
+                            <h3>Audit & Assurance services</h3>
+                        <div class="image">
+                            <img src="money_bill.png" height="50px" width="45px alt="img">
+                        </div>
+                        <div class="s_content2">
+                            <p> <br> </p>
+                            <li class="subtext">Statutory Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Internal Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Tax Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Stock Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Retail Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Concurrent Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">CSR Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Trust & Societies</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Transfer Pricing Audit</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Secretarial Audit</li>
+                        <!--BUTTON-->
+                        <div class="button_ourservices"></ul>
+                            <a href="enquire.html">
+                              <button class="button">Enquire Now</button>
+                            </a>
+                        </div>
+                        <!--BUTTON-->
+                        </div>
+                    </div>
+
+                    <div class="s_box2 s_box2_alternate">
+                         <h3>Other Services</h3>
+                        <div class="image">
+                            <img src="bill.png" height="50px" width="45px alt="img">
+                        </div>
+                        <div class="s_content2">
+                           
+                            <p> <br> </p>
+                            <li class="subtext">Virtual CFO</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Business Valuation</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Merchant Banker</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Trademark Protection</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Payroll Management</li>
+                            <hr class="hr_line">
+                            <li class="subtext">PF & ESI</li>
+                            <hr class="hr_line">
+                            <li class="subtext">ISO Certification</li>
+                            <hr class="hr_line">
+                            <li class="subtext">Shop License</li>
+                                                                                <!-- uncommented this to make it look better -->
+                            <!-- <hr class="hr_line">
+                            <li class="subtext">MSME Registration</li>
+                            <hr class="hr_line">
+                            <li class="subtext">FSSAI License</li> -->
+                        <!--BUTTON-->
+                        <div class="button_ourservices"></ul>
+                            <a href="enquire.html">
+                              <button class="button">Enquire Now</button>
+                            </a>
+                        </div>
+                          
+                        <!--BUTTON-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!--3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333-->
+               <!-- <section class="company_registration">
+                    <div class="title1">
+                        <h1 class="font">Company Registration</h1>
+                    </div>
+                    <div class="s_container1">
+                        <div class="s_boxes1">
+                            <div class="s_box1">
+                                <div class="image">
+                                    <img src="" alt="img">
+                                </div>
+                                <div class="s_content1">
+                                    <h3>OPC</h3>
+                                    <p> <br> </p>
+                                    <li class="subtext">PAN & TAN Registration</li>
+                                    <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                                </div>
+                            </div>
+                            <div class="s_box1">
+                                <div class="image">
+                                    <img src="" alt="img">
+                                </div>
+                                <div class="s_content1">
+                                    <h3>Private Limited</h3>
+                                    <p> <br> </p>
+                                    <li class="subtext">PAN & TAN Registration</li>
+                                    <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                                </div>
+                            </div>
+                            <div class="s_box1">
+                                <div class="image">
+                                    <img src="" alt="img">
+                                </div>
+                                <div class="s_content1">
+                                    <h3>LLP</h3>
+                                    <p> <br> </p>
+                                    <li class="subtext">PAN & TAN Registration</li>
+                                    <li class="subtext">PF + ESIC + Professional Tax Registration</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+GRIDS
+            <div class="grid_div">
+                <h1>GRIDS</h1>
+                <div class="grid">
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                    <div class="grid_box"></div>
+                </div>
+            </div> -->
+                
+        
+        
+ <!-- 444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->
+ <a href="enquire.html" target="_blank" style="text-decoration: none;">
+    <section>
+      <div class="talk">
+        <div class="talk_box">
+          <div class="talk_content">
+            <h2>Talk To An Expert Now</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </a>
+  
+
+
+<!-- 555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+
+<section>
+    <div class="s_container5">
+        <div class="about_header">
+            <h2>About Us</h2>
+        </div>
+        <div class="about_content">
+            <p>
+                Chhota CFO is a team of highly experienced professionals, including Chartered Accountants, Cost Accountants, and Company Secretaries, committed to providing pragmatic solutions with client satisfaction as our top priority. As collaborators in your growth journey, we provide personalized services tailored to your unique requirements, adding value and optimizing benefits for your business while allowing you to focus on the core of your business. Our proactive approach is always on the lookout for new and innovative ways to help our clients achieve their business goals. We take pride in our ability to deliver high-quality, efficient, and cost-effective services and build long-lasting relationships with our clients.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- 666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+
+<section class="section6">
+    <div class="s_container6">
+        <div class="s_boxes6">
+            <div class="s_box6 s_box6_first">
+                <div class="image">
+                    <img src="bulb.png" height="50px" width="45px" alt="img">
+                </div>
+                <div class="s_content3">
+                    <h1>Start Up & SMEs</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Best for Start Up & SMEs</p>
+                </div>
+            </div>
+            <div class="s_box6 s_box6_second">
+                <div class="image">
+                    <img src="thumbs_up.png" height="50px" width="45px" alt="img">
+                </div>
+                <div class="s_content3">
+                    <h1>4.9*</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Google Business Ratings</p>
+                </div>
+            </div>
+            <div class="s_box6 s_box6_first">
+                <div class="gridmedia">
+                <div class="image">
+                    <img src="handshake.png" height="55px" width="50px" alt="img">
+                </div>
+
+                <div class="s_content3">
+                    <h2 class="no_counter"></h2>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Happy Clients</p>
+                </div></div>
+            </div>
+            <div class="s_box6 s_box6_second"><div class="gridmedia">
+                <div class="image">
+                    <img src="rocket.png" height="50px" width="45px" alt="img">
+                </div>
+                <div class="s_content3">
+                    <h1>100+</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Projects Completed</p>
+                </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--7777777777777777777777777777777777777777777777777777777777777777777777777777-->
+<section class="section7">
+    <div class="s_container6">
+        <div class="s_boxes6">
+            <div class="s_box6 s_box6_second"><div class="gridmedia">
+                <div class="image">
+                                                                 <!-- ------ NEW -------->
+                    <span class="s6_span">
+                        <img src="search.png" height="50px" width="45px" alt="img">
+                    </span>
+                    
+                </div>
+                <div class="s_content3">
+                    <h1>Transparency</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Absolute Disclosures</p>
+                </div></div>
+            </div>
+            <div class="s_box6 s_box6_first"><div class="gridmedia">
+                <div class="image">
+                                                                 <!-- ------ NEW -------->
+                    <span class="s6_span">
+                        <img src="user.png" height="50px" width="45px" alt="img">
+                    </span>
+                    
+                </div>
+                <div class="s_content3 s_box6_first">
+                    <h1>30+</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">30+ Team Members at your service</p>
+                </div></div>
+            </div>
+            <div class="s_box6  s_box6_second">
+                <div class="image">
+                                                                 <!-- ------ NEW -------->
+                    <span class="s6_span">
+                        <img src="user_cog.png" height="50px" width="55px" alt="img">
+                    </span>
+                    
+                </div>
+                <div class="s_content3">
+                    <h1>Robust Service</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Consistent Quality Services</p>
+                </div>
+            </div>
+            <div class="s_box6 s_box6_first">
+                <div class="image">
+                                                                 <!-- ------ NEW -------->
+                    <span class="s6_span">
+                        <img src="hour_glass.png" height="60px" width="45px" alt="img">
+                    </span>
+                    
+                </div>
+                <div class="s_content3">
+                    <h1>TAT</h1>
+                    <!-- <p> <br> </p> -->
+                    <p class="subtext6">Quick Turn Around time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--7777777777777777777777777777777777777777777777777777777777777777777777777777-->
+<!-- 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 -->
+
+
+
+            <section class="section8">
+                <div class="testimonial">
+                    <div class="test_content">
+                        <h1 class="test_head">Testimonial</h1>
+                        <p class="test_p">Our Happy Customer Says</p>
+                    </div>
+                    <div class="slider">
+                        
+                    </div>
+                </div>
+            </section>
+            </main>
+            <footer>
+            <section class="footer">
+            <div class="f_container">
+            <div class="f_boxes">
+            
+
+
+<!-- contact us box -->
+
+    <div class="Fn-box">
+        <div class="f1_content1">
+            <h1>Contact Us</h1>
+        </div>
+
+        <div class="f1_content2">
+            <ul>
+                <li class="f1_content2_line1">
+                    <span class="f1_image social_media">
+                        <img src="location.png" height="30px" width="20px" alt="img">
+                    </span>
+                    <span class="f1_p">
+                        50, 12th Main Rd, 4th T Block East, KV Layout, Jayanagar, Bengaluru, Karnataka 560011
+                    </span>
+                </li>
+                <hr class="hr_solid">
+                <li>
+                    <span class="f1_image social_media">
+                        <img src="telephone.png" height="25px" width="25px" alt="img">
+                    </span>
+                    <span class="number">
+                        +91 9273526438
+                    </span>
+                </li>
+                <hr class="hr_solid">
+                <li>
+                    <span class="f1_image social_media">
+                        <img src="telephone.png" height="25px" width="25px" alt="img">
+                    </span>
+                    <span class="number">
+                        +91 9364628440
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="f1_content3">
+            <span class="social_media">
+                <a href="https://www.facebook.com/ChhotaCFOComplianceSolutions" target="_blank">
+                    <img src="fb.png" height="30px" width="30px" alt="img">
+                </a>
+            </span>
+            <span class="social_media">
+                <a href="https://www.linkedin.com/company/chhotacfo" target="_blank">
+                    <img src="linked_in.png" height="30px" width="30px" alt="img">
+                </a>
+            </span>
+            <span class="social_media">
+                <a href="https://twitter.com/chhotacfo/" target="_blank">
+                    <img src="twitter.png" height="30px" width="30px"  alt="img">
+                </a>
+            </span>
+            <span class="social_media">
+                <a href="https://www.instagram.com/chhotacfo1/" target="_blank">
+                    <img src="insta.png" height="30px" width="30px"   alt="img">
+                </a>
+            </span>
+        </div>
+    </div>
+
+
+<!-- Our services box -->
+
+<div class="F-box">
+    <div class="f2_content1">
+        <h1>Our Services</h1>
+    </div>
+    <div class="f2_content2">
+        <ul>
+            <li><a href="Company Registration.html"target="_blank">Company Registration</a></li>
+            <hr class="hr_solid">
+            <li><a href="Private Limited Company.html"target="_blank">Private Limited Company</a></li>
+            <hr class="hr_solid">
+            <li><a href="Accounting Services.html"target="_blank">Accounting Services</a></li>
+            <hr class="hr_solid">
+            <li><a href="Proprietorship Registration.html"target="_blank">Proprietorship Registration</a></li>
+            <hr class="hr_solid">
+            <li><a href="GST Compliance.html">GST Compliance</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- useful links box -->
+
+<div class="F-box">
+    <div class="f2_content1">
+        <h1>Useful Links</h1>
+    </div>
+    <div class="f2_content2">
+        <ul>
+            <li><a href="#">Ministry of Corporate Affairs</a></li>
+            <hr class="hr_solid">
+            <li><a href="#">Income tax</a></li>
+            <hr class="hr_solid">
+            <li><a href="#">Central Board of Excise & Customs</a></li>
+            <hr class="hr_solid">
+            <li><a href="#">Goods and Services Tax</a></li>
+            <hr class="hr_solid">
+            <li><a href="#">Employee Provident Fund</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+</section>
+</footer>
+
+<script>window.addEventListener('scroll', function() {
+    var footerBox = document.querySelector('.f_boxes');
+    var footerBoxPosition = footerBox.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (footerBoxPosition < windowHeight) {
+        footerBox.style.transform = 'translateY(0)'; /* Move the footer up */
+    }
+});
+</script>
+
+
+<script>
+    window.addEventListener('scroll', function() {
+        var talkBox = document.querySelector('.talk');
+        var talkContent = document.querySelector('.talk_content');
+
+        var talkBoxPosition = talkBox.getBoundingClientRect().top;
+        var talkContentPosition = talkContent.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (talkBoxPosition < windowHeight) {
+            talkBox.style.opacity = '1'; /* Show the talk box */
+        }
+
+        if (talkContentPosition < windowHeight) {
+            talkContent.style.animationPlayState = 'running'; /* Start the zoomInOut animation */
+        }
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the section element
+        var companyRegistration = document.querySelector('.company_registration');
+
+        // Function to check if an element is in the viewport
+        function isElementInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event
+        function handleScroll() {
+            if (isElementInViewport(companyRegistration)) {
+                companyRegistration.classList.add('slide-in');
+                // Remove the event listener after the section has slid in
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+
+        // Add the event listener for the scroll event
+        window.addEventListener('scroll', handleScroll);
+    });
+</script>
+
+<script>
+
+function myfunction()
+{
+var navbar= document.getElementById('nav');
+navbar.classList.toggle('show');
+}
+
+const lines = [
+  "Empowering Companies, Ensuring Legal Compliance",
+  "Enabling Growth",
+];
+/*----------------------js for autotype----------------------------*/
+
+const taglines = [
+  "Empowering Businesses, Simplifying Compliance",
+  "Driving Business Growth, Ensuring Regulatory Compliance",
+  "Boosting Business, Easing Regulatory Burdens",
+  "Enabling Growth, Enhancing Compliance",
+  "Empowering Companies, Ensuring Legal Compliance",
+  "Facilitating Success, Simplifying Regulations",
+  "Empowering Entrepreneurs, Navigating Legalities",
+  "Strengthening Businesses, Streamlining Compliance",
+  "Empowering Enterprises, Mitigating Compliance Challenges",
+  "Simplifying Operations, Empowering Business Owners",
+  "Enhancing Efficiency, Minimizing Compliance Complexity",
+  "Driving Success, Simplifying Business Regulations"
+];
+
+let index = 0;
+let isTyping = true;
+let taglineElement = document.getElementById("tagline");
+
+function animateText() {
+  const text = taglines[index];
+  let charIndex = 0;
+
+  let interval = setInterval(() => {
+    if (isTyping) {
+      taglineElement.textContent += text[charIndex];
+      charIndex++;
+
+      if (charIndex >= text.length) {
+        isTyping = false;
+        clearInterval(interval);
+        setTimeout(animateText, 1500); // Wait for 1.5 seconds before untyping
+      }
+    } else {
+      taglineElement.textContent = text.slice(0, charIndex);
+      charIndex--;
+
+      if (charIndex < 0) {
+        isTyping = true;
+        clearInterval(interval);
+
+        // Move to the next tagline
+        index++;
+        if (index >= taglines.length) {
+          index = 0; // Restart from the first tagline
+        }
+
+        setTimeout(animateText, 0); // Wait for 1.5 seconds before typing the next tagline
+      }
+    }
+  }, 100); // Typing speed (adjust as desired)
+}
+
+// Start the animation
+animateText();
+
+
+/*----------------------js for autotype----------------------------*/
+ 
+var swiper = new Swiper(".mySwiper",{
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay:{
+        dalay:2000,
+        disableOninteraction: false,
+    },
+pagination: {
+    el: ".swiper-pagingation",
+    clickable: true,
+
+},
+grabCursor: true,
+naviagation:{
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+},
+});
+/*----------------------------------------------------------------*/
+
+
+
+</script>
+</body>
+</html>
+
+
+    
+  

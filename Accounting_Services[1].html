@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Service</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .upper-section {
+        flex: 1;
+        background-color: #FFF593;
+        text-align: center;
+        animation: slide-up 1s ease-in-out;
+      }
+
+      .lower-section {
+        flex: 4;
+        display: flex;
+      }
+
+      .left-section {
+        flex: 2;
+        font-size:18px;
+        background-color: #92dcf5;
+        padding: 20px;
+        animation: slide-left 1s ease-in-out;
+        animation-play-state: running;
+        color: #000000;
+      }
+
+      .right-section {
+        flex: 1;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6tK0lGoAIYv6Nqvq0Hf1ayIhy7c6PagjulA&usqp=CAU');
+        padding: 10px;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid black;
+      }
+
+      form {
+        border: 4px solid black;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      button[type="submit"] {
+        background-color: rgb(0, 190, 254);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: rgb(30, 255, 0);
+      }
+
+      button[type="submit"]:focus {
+        outline: none;
+        box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      @keyframes slide-up {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-left {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper-section">
+        <h1>Introducing Accounting Service Anandam Infolines:</h1>
+        <h2>Your Trusted Accounting Partner</h2>
+      </div>
+      <div class="lower-section">
+        <div class="left-section">
+          <p>Anandam Infolines is a premier accounting service provider that offers a comprehensive range of accounting solutions to meet the diverse needs of businesses. With our expertise in financial management and industry best practices, we ensure that your financial records are accurate, up-to-date, and compliant with regulatory requirements. Our team of experienced professionals understands the importance of accounting in driving business success, and we are committed to delivering exceptional services tailored to your specific requirements.</p>
+          <h2>Why Choose Anandam Infolines?</h2>
+          <ol>
+            <li>Expertise and Reliability: With a team of highly skilled accountants, we bring years of experience and expertise to the table. You can rely on us to handle your accounting needs with precision and efficiency.</li>
+            <li>Customized Solutions: We understand that every business is unique, and we tailor our services to match your specific needs. Whether you require financial statement preparation, tax planning, or payroll services, we have you covered.</li>
+            <li>Technology-driven Approach: At Anandam Infolines, we leverage advanced accounting software and cloud-based solutions to streamline your financial processes. This ensures accurate and real-time reporting, enabling you to make informed business decisions.</li>
+            <li>Cost-effective Outsourcing: Outsourcing your accounting services to us allows you to focus on core business activities while reducing overhead costs associated with maintaining an in-house accounting department.</li>
+          </ol>
+          <h2>Our Range of Accounting Services:</h2>
+          <ul>
+            <li>Financial Accounting: We handle the preparation and analysis of financial statements, ensuring compliance with accounting standards and regulations.</li>
+            <li>Management Accounting: Our team provides financial and non-financial decision-making information to help you steer your business in the right direction.</li>
+            <li>Tax Accounting: From GST and sales tax returns to tax planning and compliance, we ensure your tax-related matters are in order.</li>
+            <li>Cost Accounting: We assist in cost allocation, control, and cash flow management, helping you reduce costs and increase profitability.</li>
+            <li>Payroll Services: Let us take care of your payroll processing, including tax calculations, benefit deductions, and accurate issuance of paychecks.</li>
+            <li>Statutory Compliances: We ensure your company remains compliant with all necessary statutory requirements, including tax deductions, minimum wages, and employee-related services.</li>
+          </ul>
+        </div>
+        <div class="right-section">
+          <form>
+            <h1>Let's Craft Your Business</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <br /><br />
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" />
+            <br /><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <br /><br />
+            <textarea
+              name="text"
+              id="text"
+              cols="10"
+              rows="5"
+              placeholder="Write your Concern here"
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
